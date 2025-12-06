@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tarot de Jasminee - Katty Ramos Felix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tarot Cigano com Katty Ramos Felix, guiada pela força e sabedoria da Cigana Jasmine. Leituras para clareza, direcionamento e autoconhecimento.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #060612;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            background: rgba(6, 6, 18, 0.9);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+
+        .logo span {
+            color: #facc15;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            opacity: 0.8;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        .btn-whats {
+            background: #22c55e;
+            color: #041007;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-whats span {
+            font-size: 1.1rem;
+        }
+
+        main {
+            padding-bottom: 60px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 40px 0 30px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+            gap: 32px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            font-size: 0.75rem;
+            margin-bottom: 14px;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-title span {
+            color: #facc15;
+        }
+
+        .hero-subtitle {
+            font-size: 0.98rem;
+            opacity: 0.85;
+            margin-bottom: 18px;
+        }
+
+        .hero-list {
+            list-style: none;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .hero-list li span {
+            color: #22c55e;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .hero-secondary {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .hero-card {
+            background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+            border-radius: 18px;
+            padding: 20px;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.9);
+        }
+
+        .hero-card-title {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .hero-card-sub {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-bottom: 14px;
+        }
+
+        .hero-card-list {
+            font-size: 0.8rem;
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .hero-card-list li {
+            margin-bottom: 6px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.5), transparent);
+            margin: 24px 0;
+        }
+
+        /* Section generic */
+        section {
+            padding: 20px 0;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .section-subtitle {
+            font-size: 0.85rem;
+            opacity: 0.75;
+            margin-bottom: 18px;
+        }
+
+        /* Serviços */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: #020617;
+            border-radius: 12px;
+            padding: 14px;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            font-size: 0.85rem;
+        }
+
+        .card h3 {
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+            color: #facc15;
+        }
+
+        .card p {
+            opacity: 0.85;
+            margin-bottom: 6px;
+        }
+
+        .card small {
+            opacity: 0.7;
+            font-size: 0.75rem;
+        }
+
+        /* Depoimentos */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .testimonial {
+            background: #020617;
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid rgba(51, 65, 85, 0.9);
+            font-size: 0.8rem;
+        }
+
+        .testimonial p {
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .testimonial strong {
+            font-size: 0.78rem;
+            opacity: 0.8;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .faq-item h3 {
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+            color: #facc15;
+        }
+
+        .faq-item p {
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        /* Contato */
+        .contact-box {
+            background: #020617;
+            border-radius: 14px;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            padding: 16px;
+            font-size: 0.9rem;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .btn-outline {
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.8);
+            padding: 7px 14px;
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        .btn-outline:hover {
+            opacity: 1;
+        }
+
+        footer {
+            padding: 18px 0 24px;
+            font-size: 0.75rem;
+            opacity: 0.6;
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero {
+                padding-top: 24px;
+            }
+
+            .cards-grid,
+            .testimonials {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav">
+        <div class="logo">Tarot <span>de Jasminee</span></div>
+        <nav class="nav-links">
+            <a href="#sobre">sobre</a>
+            <a href="#servicos">serviços</a>
+            <a href="#depoimentos">depoimentos</a>
+            <a href="#contato">contato</a>
+        </nav>
+        <!-- WhatsApp da Katty -->
+        <a class="btn-whats" href="https://wa.me/5511913543831?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+de+Tarot+Cigano+%F0%9F%94%AE" target="_blank" rel="noopener">
+            <span>🟢</span> agendar no whatsapp
+        </a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="hero-badge">
+                    🔮 Tarot Cigano • Atendimentos online
+                </div>
+                <h1 class="hero-title">Tarot de <span>Jasminee</span> – mensagens para o seu destino.</h1>
+                <p class="hero-subtitle">
+                    Sou Katty Ramos Felix, guiada pela força e sabedoria da Cigana Jasmine 🌹.
+                    Através do Tarot Cigano, ofereço leituras que trazem clareza, direcionamento e
+                    autoconhecimento, ajudando você a compreender os caminhos que o destino coloca diante de si.
+                </p>
+                <ul class="hero-list">
+                    <li><span>✔</span> Tiragens profundas, acolhedoras e intuitivas</li>
+                    <li><span>✔</span> Consultas online com horário flexível</li>
+                    <li><span>✔</span> Foco em clareza, cura e autoconhecimento</li>
+                </ul>
+                <div class="hero-actions">
+                    <a class="btn-whats" href="https://wa.me/5511913543831?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+de+Tarot+Cigano+%F0%9F%94%AE" target="_blank" rel="noopener">
+                        <span>💬</span> falar agora no whatsapp
+                    </a>
+                    <span class="hero-secondary">resposta rápida.. vagas limitadas por dia</span>
+                </div>
+            </div>
+            <aside class="hero-card">
+                <h2 class="hero-card-title">Sobre o Tarot de Jasminee</h2>
+                <p class="hero-card-sub">
+                    Cada tiragem é um encontro entre a energia das cartas, a espiritualidade cigana
+                    e a verdade do seu momento atual. Com amor, intuição e respeito, trago as mensagens que o plano
+                    espiritual deseja te revelar — sejam alertas, conselhos ou confirmações que o seu coração já sente.
+                </p>
+                <ul class="hero-card-list">
+                    <li>• Leituras com a energia da Cigana Jasmine</li>
+                    <li>• Espaço seguro para sentir, perguntar e se ouvir</li>
+                    <li>• Atendimento humanizado, com acolhimento e verdade</li>
+                </ul>
+                <small>🌙 Deixe que a sabedoria da Cigana Jasmine te mostre o que está por vir.  
+                🔮 Permita-se ouvir o chamado do destino.</small>
+            </aside>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="servicos">
+        <div class="container">
+            <h2 class="section-title">Tipos de consulta</h2>
+            <p class="section-subtitle">Escolha a tiragem que conversa melhor com o momento que você está vivendo..</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Leitura Completa</h3>
+                    <p>Visão geral sobre amor, trabalho, finanças, espiritualidade e caminhos de vida, com espaço para perguntas específicas..</p>
+                    <small>Duração média: 60 min · Online (vídeo ou áudio)</small>
+                </div>
+                <div class="card">
+                    <h3>Amor & Relacionamentos</h3>
+                    <p>Para quem busca compreensão sobre relacionamentos, reencontros, ciclos que se repetem e decisões do coração..</p>
+                    <small>Duração média: 40 min</small>
+                </div>
+                <div class="card">
+                    <h3>Pergunta Direta</h3>
+                    <p>Foco em uma situação específica.. ideal para quem precisa de clareza em uma decisão importante ou caminho a seguir..</p>
+                    <small>Duração média: 30 min</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Como funciona o atendimento</h2>
+            <p class="section-subtitle">Simples, acolhedor e totalmente voltado para o seu momento atual..</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>1. Contato</h3>
+                    <p>Você chama no WhatsApp, conta um pouco do que está vivendo e escolhemos juntas(o) o tipo de tiragem ideal para você..</p>
+                </div>
+                <div class="card">
+                    <h3>2. Agendamento</h3>
+                    <p>Definimos o melhor dia e horário.. a consulta é feita online, com toda a energia preparada para receber você..</p>
+                </div>
+                <div class="card">
+                    <h3>3. Leitura</h3>
+                    <p>As cartas são abertas com respeito e verdade, trazendo mensagens, alertas e confirmações que o plano espiritual deseja te mostrar..</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <div class="container">
+            <h2 class="section-title">Depoimentos</h2>
+            <p class="section-subtitle">Algumas experiências de quem já se permitiu viver essa conexão..</p>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>“Senti como se a Cigana Jasmine falasse comigo através das cartas.. Saí em paz e com muito mais clareza.”</p>
+                    <strong>— A., São Paulo</strong>
+                </div>
+                <div class="testimonial">
+                    <p>“A Katty fala com carinho, mas é muito verdadeira.. a leitura me ajudou a tomar uma decisão que eu enrolava há meses.”</p>
+                    <strong>— M., Guarulhos</strong>
+                </div>
+                <div class="testimonial">
+                    <p>“Foi um abraço na alma.. parecia que ela já conhecia minha história.. gratidão pela sua luz!”</p>
+                    <strong>— J., Online</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Dúvidas frequentes</h2>
+            <p class="section-subtitle">Antes de agendar, talvez isso responda algumas perguntas suas..</p>
+            <div class="faq-item">
+                <h3>O Tarot Cigano prevê o futuro?</h3>
+                <p>O tarot mostra tendências, caminhos e mensagens espirituais para o seu momento.. não é sentença, é orientação e consciência..</p>
+            </div>
+            <div class="faq-item">
+                <h3>Preciso ter alguma religião?</h3>
+                <p>Não.. o importante é o respeito pela espiritualidade e abertura para olhar para dentro de si..</p>
+            </div>
+            <div class="faq-item">
+                <h3>Como funciona o pagamento?</h3>
+                <p>Valores, formas de pagamento e detalhes do atendimento são combinados diretamente pelo WhatsApp, de forma simples e segura..</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2 class="section-title">Agende sua consulta</h2>
+            <p class="section-subtitle">Clique no botão abaixo para falar diretamente com a Katty no WhatsApp..</p>
+            <div class="contact-box">
+                <p>Compartilhe o que você está sentindo, qual área da vida mais precisa de clareza agora e vamos ver juntos o que as cartas têm a dizer..</p>
+                <div class="contact-links">
+                    <a class="btn-whats" href="https://wa.me/5511913543831?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+consulta+de+Tarot+Cigano+%F0%9F%94%AE" target="_blank" rel="noopener">
+                        💬 falar no whatsapp
+                    </a>
+                    <a class="btn-outline" href="https://instagram.com/tarotdejasminee" target="_blank" rel="noopener">
+                        ✨ ver conteúdos no instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        © <span id="ano"></span> Tarot de Jasminee · Katty Ramos Felix.. Todos os direitos reservados..
+    </div>
+</footer>
+
+<script>
+    // atualiza o ano automaticamente
+    document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
